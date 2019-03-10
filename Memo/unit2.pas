@@ -32,15 +32,12 @@ procedure KTurnAr(var a: Ar; n: integer; k:  integer; around: boolean);
 implementation
 
 {Процедура заполнения матрицы рандомными числами}
-// здесь ВАЖНАЯ ПОПРАВОЧКА
-//т.к. этот модуль компилируется отдельно от основной программы
-// то randomize в нём работать не будет
-// randomize надо вызывать в основной программе
 //'var a' - т.к. меняем элементы матрицы
 //  'n' - разменрность матрицы - число строк и столбцов
 procedure NewAr(var a: Ar; n : integer);
 var i, j: integer;
 begin
+   randomize;  // Для генератора случайных чисел - более случайное число
    for i:=1 to n do
        for j:=1 to n do
            a[i,j] := random(100); // рандомное число на отрезке [0;99]
@@ -256,4 +253,3 @@ begin
 end;
 
 end.
-
