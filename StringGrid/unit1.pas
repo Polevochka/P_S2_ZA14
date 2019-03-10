@@ -63,7 +63,7 @@ begin
 
   // Чтобы обращаться к атрибутам output без точки
   // Например раньше надо было писать
-  // 'output.ColCount' , теперь же достаточно просто 'RowCount'
+  // 'output.ColCount' , теперь же достаточно просто 'ColCount'
   with output do
   begin
 
